@@ -4,31 +4,32 @@
 
 * `docker`:
   
-    `public`:
-            ├──style.css
+          `public`:
+                  ├──CSSInjectionDemo.java
+                  ├──style.css
     
-    `views`:
+          `views`:
  
-        `pages`:
-               ├── login.java
-               ├── profile.java  
+                 `pages`:
+                        ├── login.java
+                        ├── profile.java  
                
-        `partials`:
-                  ├── .gitignore
-                  ├── Dockerfile
-                  ├── header.java
-                  ├── footer.java  
+                 `partials`:
+                        ├── .gitignore
+                        ├── Dockerfile
+                        ├── header.java
+                        ├── footer.java  
                   
-        ├── .gitignore
-        ├── app.java
-        ├── Dockerfile
-        ├── package.properties
-        ├── properties.json
-        ├── router.java
-        ├── server.java
+                 ├── .gitignore
+                 ├── app.java
+                 ├── Dockerfile
+                 ├── package.properties
+                 ├── properties.json
+                 ├── router.java
+                 ├── server.java
         
 * `en`:
-   ├── README.md
+      ├── README.md
   
 * `docker`:
   
@@ -38,4 +39,4 @@
           ├── Test.java
 
 
-* `properties.json`: contains some informational data.
+* `properties.json`: contains some informational data about the author.
