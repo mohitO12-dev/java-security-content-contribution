@@ -5,4 +5,12 @@ In today's digital landscape, securing web applications against OWASP vulnerabil
 ![alt-text](https://miro.medium.com/v2/resize:fit:720/format:webp/0*-_ZBcb8JkOUNWlGy.gif)
 ### *Understanding OWASP Vulnerabilities*
 
+
+The Open Web Application Security Project (OWASP) provides a framework for identifying and addressing security risks in web applications. Some of the most prevalent vulnerabilities include:
+
+* **SQL Injection:** Attackers exploit poorly sanitized user inputs to manipulate SQL queries, potentially gaining unauthorized access to databases.
+* **Cross-Site Scripting (XSS):** Malicious scripts injected into web pages via user inputs can compromise user sessions and steal sensitive data.
+* **Cross-Site Request Forgery (CSRF):** Attackers trick users into executing unwanted actions in authenticated sessions, leading to unauthorized transactions or data manipulation.
+* **Insecure Session Management:** Weaknesses in session management mechanisms enable attackers to hijack user sessions and impersonate legitimate users.
+
 ![alt-text](https://user-images.githubusercontent.com/24669027/39022564-bf96bde2-4453-11e8-9814-c30db364aa4d.gif)
