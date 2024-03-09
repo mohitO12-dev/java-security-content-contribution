@@ -3,6 +3,7 @@
 ## **Folder Structure**
 
 * `docker`:
+  
     `public`:
             ├──style.css
     
@@ -25,13 +26,16 @@
         ├── properties.json
         ├── router.java
         ├── server.java
+        
 * `en`:
    ├── README.md
-* `docker`: 
-├── .gitignore
-├── pom.xml
-├── properties.json
-├── Test.java
+  
+* `docker`:
+  
+          ├── .gitignore
+          ├── pom.xml
+          ├── properties.json
+          ├── Test.java
 
 
 * `properties.json`: contains some informational data.
