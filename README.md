@@ -7,7 +7,7 @@
     `public`:
             ├──style.css
     
- `views`:
+    `views`:
  
         `pages`:
                ├── login.java
