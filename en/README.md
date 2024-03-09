@@ -84,6 +84,52 @@ public class SessionManagementExample {
 ```
 * **Insecure Session Management:** Weaknesses in session management mechanisms enable attackers to hijack user sessions and impersonate legitimate users.
 
+### Jakarta EE Security Skills.  
+#### 1. Authentication
+*Leverage Jakarta EE's authentication mechanisms to verify user identities and enforce access controls.*
+
+**Code Snippet**
+```java
+import javax.security.enterprise.AuthenticationStatus;
+import javax.security.enterprise.authentication.mechanism.http.AuthenticationParameters;
+import javax.security.enterprise.authentication.mechanism.http.HttpAuthenticationMechanism;
+import javax.security.enterprise.authentication.mechanism.http.HttpMessageContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class AuthenticationMechanismExample implements HttpAuthenticationMechanism {
+
+    @Override
+    public AuthenticationStatus validateRequest(HttpServletRequest request, HttpServletResponse response, HttpMessageContext httpMessageContext) {
+        // Implement authentication logic
+        return httpMessageContext.notifyContainerAboutLogin(username, groups);
+    }
+}
+
+```
+#### 2. Authorization
+*Enforce fine-grained access controls using Jakarta EE's authorization mechanisms, restricting access to sensitive resources based on user roles and permissions.*
+**Code Snippet**
+```java
+import javax.annotation.security.RolesAllowed;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
+
+@Path("/admin")
+@RolesAllowed("ADMIN")
+public class AdminResource {
+
+    @GET
+    public Response getAdminPage() {
+        return Response.ok("Welcome to the admin page").build();
+    }
+}
+```
 ![alt-text](https://user-images.githubusercontent.com/24669027/39022564-bf96bde2-4453-11e8-9814-c30db364aa4d.gif)
+
+## Summary
+In summary, securing Java web applications against OWASP vulnerabilities is paramount for ensuring data integrity and user privacy. By implementing secure coding practices and leveraging Jakarta EE's robust security features, developers can effectively mitigate common threats such as SQL injection and cross-site scripting. Through techniques like input validation, SQL prepared statements, and secure session management, developers can build resilient applications that prioritize security. Jakarta EE's authentication and authorization mechanisms further enhance security by enforcing access controls and protecting sensitive resources. By integrating these best practices into their development processes, Java developers can create reliable and secure web applications that instill trust and confidence in users, safeguarding against potential cyber threats in today's dynamic digital landscape.
 
 
