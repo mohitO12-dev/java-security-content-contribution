@@ -1,10 +1,7 @@
 # Technical Java Security Content Contribution: *Prevent the OWASP vulnerabilities in the Java programming language.*
 
-
 ## **Folder Structure**
-
 * `docker`:
-docker/
 └── public
     ├──style.css    
 └── views
@@ -15,8 +12,7 @@ docker/
             ├── .gitignore
             ├── Dockerfile
             ├── header.java
-            ├── footer.java
-         
+            ├── footer.java   
          ├── .gitignore
          ├── app.java
          ├── Dockerfile
@@ -25,11 +21,8 @@ docker/
          ├── router.java
          ├── server.java
 * `en`:
-en/
    ├── README.md
-
-* `docker`:
-docker/  
+* `docker`: 
 ├── .gitignore
 ├── pom.xml
 ├── properties.json
