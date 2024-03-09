@@ -9,7 +9,7 @@ In today's digital landscape, securing web applications against OWASP vulnerabil
 The Open Web Application Security Project (OWASP) provides a framework for identifying and addressing security risks in web applications. Some of the most prevalent vulnerabilities include:
 
 * **SQL Injection:** Attackers exploit poorly sanitized user inputs to manipulate SQL queries, potentially gaining unauthorized access to databases.
-* *Code Snippets*
+*Code Snippet*
 ```java
 import java.util.regex.Pattern;
 
@@ -32,7 +32,56 @@ public class InputValidationExample {
 }
 ```
 * **Cross-Site Scripting (XSS):** Malicious scripts injected into web pages via user inputs can compromise user sessions and steal sensitive data.
+*Code Snippet*
+```java
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class SqlInjectionPreventionExample {
+
+    public static void main(String[] args) {
+        String username = "user";
+        String password = "password";
+
+        try (Connection connection = getConnection()) {
+            String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, username);
+                statement.setString(2, password);
+                // Execute query
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Connection getConnection() throws SQLException {
+        // Establish database connection
+        return null;
+    }
+}
+```
 * **Cross-Site Request Forgery (CSRF):** Attackers trick users into executing unwanted actions in authenticated sessions, leading to unauthorized transactions or data manipulation.
+*Code Snippet*
+```java
+import javax.servlet.http.HttpSession;
+
+public class SessionManagementExample {
+
+    public static void main(String[] args) {
+        // Get HttpSession object from HttpServletRequest
+        HttpSession session = null;
+
+        // Set session attribute
+        session.setAttribute("username", "user123");
+
+        // Retrieve session attribute
+        String username = (String) session.getAttribute("username");
+        System.out.println("Logged in user: " + username);
+    }
+}
+```
 * **Insecure Session Management:** Weaknesses in session management mechanisms enable attackers to hijack user sessions and impersonate legitimate users.
 
 ![alt-text](https://user-images.githubusercontent.com/24669027/39022564-bf96bde2-4453-11e8-9814-c30db364aa4d.gif)
